@@ -1,12 +1,14 @@
 resources:
   pipelines:
   - pipeline: adnoccitrigger
-    source: Adnoc-CI 
+    source: adnoc-ci
     trigger: true
+  repositories:
+  - repository: MyGitHubRepo # The name used to reference this repository in the checkout step
+    type: github
+    endpoint: github.com_siddharth-dhawan
+    name: siddharth-dhawan/app-service-web-html-get-started
 
-
-pr:
-- master
 
 
 pool:
@@ -21,7 +23,7 @@ stages:
       inputs:
         buildType: 'specific'
         project: '4e02bc03-982b-4494-9a4e-c7f8ef568388'
-        pipeline: '6'
+        pipeline: '8'
         buildVersionToDownload: 'latest'
         downloadType: 'specific'
         downloadPath: '$(System.ArtifactsDirectory)'
@@ -43,7 +45,7 @@ stages:
       inputs:
         buildType: 'specific'
         project: '4e02bc03-982b-4494-9a4e-c7f8ef568388'
-        pipeline: '6'
+        pipeline: '8'
         buildVersionToDownload: 'latest'
         downloadType: 'specific'
         downloadPath: '$(System.ArtifactsDirectory)'
