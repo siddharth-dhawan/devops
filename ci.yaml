@@ -4,9 +4,11 @@ resources:
     type: github
     endpoint: github.com_siddharth-dhawan
     name: siddharth-dhawan/app-service-web-html-get-started
-    branches:
+    trigger:
+      branches:
         include:
-        - development
+        - main
+        - release
 
 
 pool:
