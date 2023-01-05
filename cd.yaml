@@ -27,7 +27,7 @@ stages:
         specificBuildWithTriggering: true
         buildVersionToDownload: 'latest'
         downloadType: 'specific'
-        downloadPath: '$(System.ArtifactsDirectory)'
+        downloadPath: '$(Build.ArtifactStagingDirectory)'
     
     - task: AzureRmWebAppDeployment@4
       inputs:
@@ -35,7 +35,7 @@ stages:
         azureSubscription: 'Visual Studio Enterprise Subscription(b214611b-9a79-4e7e-afb0-3d9785737f10)'
         appType: 'webApp'
         WebAppName: 'devadnocapp'
-        packageForLinux: '$(System.DefaultWorkingDirectory)'
+        packageForLinux: '$(Build.ArtifactStagingDirectory)'
   
 - stage: Deploy_To_Prod
   condition: contains(variables['build.sourceBranch'], 'refs/heads/master')
@@ -50,7 +50,7 @@ stages:
         specificBuildWithTriggering: true
         buildVersionToDownload: 'latest'
         downloadType: 'specific'
-        downloadPath: '$(System.ArtifactsDirectory)'
+        downloadPath: '$(Build.ArtifactStagingDirectory)'
     
     - task: AzureRmWebAppDeployment@4
       inputs:
@@ -58,5 +58,5 @@ stages:
         azureSubscription: 'Visual Studio Enterprise Subscription(b214611b-9a79-4e7e-afb0-3d9785737f10)'
         appType: 'webApp'
         WebAppName: 'prdadnocapp'
-        packageForLinux: '$(System.DefaultWorkingDirectory)'
+        packageForLinux: '$(Build.ArtifactStagingDirectory)'
   
