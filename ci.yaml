@@ -13,7 +13,7 @@ resources:
 pool:
   vmImage: ubuntu-latest
 
-- checkout: MyGitHubRepo
+
 
 stages:
 - stage: Build
@@ -21,6 +21,7 @@ stages:
   - job: CI
 
     steps:
+    - checkout: MyGitHubRepo
     - task: CopyFiles@2
       inputs:
         SourceFolder: './'
