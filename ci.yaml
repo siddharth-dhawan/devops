@@ -5,15 +5,11 @@ resources:
     endpoint: github.com_siddharth-dhawan
     name: siddharth-dhawan/app-service-web-html-get-started
 
-
-
-# trigger:
-# - development
+trigger:
+- development
 
 pool:
   vmImage: ubuntu-latest
-
-
 
 stages:
 - stage: Build
