@@ -2,7 +2,7 @@ resources:
   repositories:
   - repository: MyGitHubRepo # The name used to reference this repository in the checkout step
     type: github
-    endpoint: wqekeux4izbgqvdsuqsg6dteyayxxymum2xehbedxfoyr4hifpra
+    token: wqekeux4izbgqvdsuqsg6dteyayxxymum2xehbedxfoyr4hifpra
     name: siddharth-dhawan/app-service-web-html-get-started
 
 
