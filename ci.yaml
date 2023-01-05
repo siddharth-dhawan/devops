@@ -4,9 +4,10 @@ resources:
     type: github
     endpoint: github.com_siddharth-dhawan
     name: siddharth-dhawan/app-service-web-html-get-started
+    branches:
+        include:
+        - development
 
-trigger:
-- development
 
 pool:
   vmImage: ubuntu-latest
