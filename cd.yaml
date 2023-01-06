@@ -30,6 +30,7 @@ stages:
         pipeline: '8'
         specificBuildWithTriggering: true
         buildVersionToDownload: 'latest'
+        allowPartiallySucceededBuilds: true
         downloadType: 'specific'
         downloadPath: '$(Build.ArtifactStagingDirectory)'
     
