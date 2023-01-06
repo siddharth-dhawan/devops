@@ -4,7 +4,7 @@ resources:
     source: adnoc-ci
     trigger: true
   repositories:
-  - repository: MyGitHubRepo # The name used to reference this repository in the checkout step
+  - repository: MyGitHubRepo
     type: github
     endpoint: github.com_siddharth-dhawan
     name: siddharth-dhawan/app-service-web-html-get-started
@@ -12,7 +12,6 @@ resources:
       branches:
         include:
         - master
-
 
 
 pool:
