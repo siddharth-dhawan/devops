@@ -29,6 +29,7 @@ stages:
         definition: '8'
         specificBuildWithTriggering: true
         buildVersionToDownload: 'latest'
+        artifactName: 'drop'
         targetPath: '$(Build.ArtifactStagingDirectory)'
     
     - task: AzureRmWebAppDeployment@4
